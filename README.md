@@ -12,21 +12,34 @@ Installation
 
 1. Add the following to your applications Gemfile
 
+```
     gem 'shitate'
+```
 
 2. Run bundler
 
+```
     bundle install
+```
 
-3. Copy assests / migrations (note: this will change after Rails 3.1).
+3. Copy migrations.
 
+```
     rails g shitate:install
+```
 
 4. Run migrations
 
+```
     rake db:migrate
+```
 
-5. In user.rb (or other model file)
+
+
+
+Usage
+=====
+In user.rb (or other model file)
 
 ```ruby
   has_shitate { :default => { 
@@ -39,10 +52,6 @@ Installation
   }
 ```
 
-
-
-Usage
-=====
 You now have setters and getters for name, age, super_cool_configuration etc.
 
 ```ruby
